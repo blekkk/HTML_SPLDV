@@ -1,1 +1,13 @@
 Ini logbook
+
+Pembagian Peran :
+  - Faza = Coder
+  - Azhar = Code - Design
+  - Nisa = Design
+  
+Target Minggu 1 Bulan Desember:
+  - Landing Page selesai
+  - Icon terkumpul
+  - Design Home Page
+  
+

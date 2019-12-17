@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Investor</title>
+        <body>
+            <table border="1" cellspacing="2" cellpading="2">
+                <tr>
+                    <td colspan="3">Laba Penjualan<td></td>
+                </tr>
+                <tr>
+                    <td>Luas Tanah Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="lt1" name="LuasTanah1"></td>
+                </tr>
+                <tr>
+                    <td>Luas Tanah Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="lt2" name="LuasTanah2"></td>
+                </tr>
+                <tr>
+                    <td>Luas Tanah Maksimal</td><td>:</td>
+                    <td><input type="text" id="tanahmaks" name="tanahmaks"></td>
+                </tr>
+                <tr>
+                    <td>Harga Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="harga1" name="harga1"></td>
+                </tr>
+                <tr>
+                    <td>Harga Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="harga2" name="harga2"></td>
+                </tr>
+                <tr>
+                    <td>Modal Awal</td><td>:</td>
+                    <td><input type="text" id="modal" name="modal"></td>
+                </tr>
+                <tr>
+                    <td>Keuntungan Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="persen1" name="Persen1">%</td>
+                </tr>
+                <tr>
+                    <td>Keuntungan Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="persen2" name="Persen2">%</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="button" id="btnHitung" value="Hitung Keuntungan" onclick="labapenjualan()"></td>
+                </tr>
+            <br>
+                <tr>
+                    <td>Keuntungan didapat</td><td>:</td>
+                    <td><input type="text" id="untung" name="keuntungan" readonly="true"></td>
+                </tr>
+                <tr>
+                    <td>Banyak Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="bykrumah1" name="rmh1" readonly="true"></td>
+                </tr>
+                <tr>
+                    <td>Banyak Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="bykrumah2" name="rmh2" readonly="true"></td>
+                 </tr>
+                <tr>
+                    <td>Harga Jual Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="total1" name="total1" readonly="true"></td>
+                </tr>
+                <tr>
+                    <td>Harga Jual Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="total2" name="total2" readonly="true"></td>
+                </tr>
+                <tr>
+                    <td>Keuntungan dari Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="untung1" name="keuntungan1" readonly="true"></td>
+                </tr>
+                <tr>
+                    <td>Keuntungan dari Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="untung2" name="keuntungan2" readonly="true"></td>
+                </tr>
+            </table>
+            <script lang="JavaScript">
+                function labapenjualan(){
+                    luas1 = parseInt(document.getElementById("lt1").value);
+                    luas2 = parseInt(document.getElementById("lt2").value);
+                    lutama = parseInt(document.getElementById("tanahmaks").value);
+                    haru1 = parseInt(document.getElementById("harga1").value);
+                    haru2 = parseInt(document.getElementById("harga2").value);
+                    modalawal = parseInt(document.getElementById("modal").value);
+                    untungpersen1 = parseInt(document.getElementById("persen1").value);
+                    untungpersen2 = parseInt(document.getElementById("persen2").value);
+
+                    var keuntungan1 = haru1*untungpersen1/100;
+                    var keuntungan2 = haru2*untungpersen2/100;
+                    var price1 = keuntungan1+haru1;
+                    var price2 = keuntungan2+haru2;
+
+                    y = ((lutama*haru1)-(luas1*modalawal))/((luas2*haru1)-(luas1*haru2));
+                    x = (lutama-(luas2*y))/luas1;
+
+                    var Profit = (keuntungan1*x)+(keuntungan2*y);
+
+                    document.getElementById("untung").value=Profit.toFixed(0);
+                    document.getElementById("bykrumah1").value=x.toFixed(0);
+                    document.getElementById("bykrumah2").value=y.toFixed(0);
+                    document.getElementById("total1").value=price1;
+                    document.getElementById("total2").value=price2;
+                    document.getElementById("untung1").value=keuntungan1;
+                    document.getElementById("untung2").value=keuntungan2;
+                }
+            </script>
+        </body>
+    </head>
+</html>
+

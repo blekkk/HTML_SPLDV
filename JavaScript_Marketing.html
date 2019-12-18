@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Marketing</title>
+        <body>
+            <table border="1" cellspacing="2" cellpading="2">
+                <tr>
+                    <td colspan="3">Komisi Penjualan<td></td>
+                </tr>
+                <tr>
+                    <td>Banyak Rumah Tipe 1 yang Dijual</td><td>:</td>
+                    <td><input type="text" id="jual1" name="jual1"></td>
+                </tr>
+                <tr>
+                    <td>Banyak Rumah Tipe 2 yang Dijual</td><td>:</td>
+                    <td><input type="text" id="jual2" name="jual2"></td>
+                </tr>
+                <tr>
+                    <td>Komisi Marketing dari Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="komisi1" name="komisi1"></td>
+                </tr>
+                <tr>
+                    <td>Komisi Marketing dari Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="komisi2" name="komisi2"></td>
+                </tr>
+                <tr>
+                    <td>Harga Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="harga1" name="harga1"></td>
+                </tr>
+                <tr>
+                    <td>Harga Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="harga2" name="harga2"></td>
+                </tr>
+                     <td>Keuntungan Rumah Tipe 1</td><td>:</td>
+                    <td><input type="text" id="persen1" name="Persen1">%</td>
+                </tr>
+                <tr>
+                    <td>Keuntungan Rumah Tipe 2</td><td>:</td>
+                    <td><input type="text" id="persen2" name="Persen2">%</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="button" id="btnHitung" value="Komisi Saya" onclick="komisi()"></td>
+                </tr>
+              <br>
+                <tr>
+                    <td>Komisi Total dari Tipe 1</td><td>:</td>
+                    <td><input type="text" id="kms1" name="kms1"></td>
+                </tr>
+                <tr>
+                    <td>Komisi Total dari Tipe 1</td><td>:</td>
+                    <td><input type="text" id="kms2" name="kms2"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>Persentase Komisi Tipe 1</td><td>:</td>
+                    <td><input type="text" id="tipe1" name="tipe1">%</td>
+                </tr>
+                <tr>
+                    <td>Persentase Komisi Tipe 2</td><td>:</td>
+                    <td><input type="text" id="tipe2" name="tipe2">%</td>
+                </tr>
+            </table>
+            <script lang="JavaScript">
+                function komisi(){
+                    rumah1 = parseInt(document.getElementById("jual1").value);
+                    rumah2 = parseInt(document.getElementById("jual2").value);
+                    komisimarket1 = parseInt(document.getElementById("komisi1").value);
+                    komisimarket2 = parseInt(document.getElementById("komisi2").value);
+                    haru1 = parseInt(document.getElementById("harga1").value);
+                    haru2 = parseInt(document.getElementById("harga2").value);
+                    untungpersen1 = parseInt(document.getElementById("persen1").value);
+                    untungpersen2 = parseInt(document.getElementById("persen2").value);
+
+                    var keuntungan1 = haru1*untungpersen1/100;
+                    var keuntungan2 = haru2*untungpersen2/100;
+                    var price1 = keuntungan1+haru1+komisimarket1;
+                    var price2 = keuntungan2+haru2+komisimarket1;
+                    var komisisaya1 = rumah1*komisimarket1;
+                    var komisisaya2 = rumah2*komisimarket2;
+                    var persentase1 = (komisisaya1/price1*rumah1);
+                    var persentase2 = (komisisaya2/price2*rumah2);
+
+                    document.getElementById("kms1").value=komisisaya1;
+                    document.getElementById("kms2").value=komisisaya2;
+                    document.getElementById("tipe1").value=persentase1.toFixed(2);
+                    document.getElementById("tipe2").value=persentase2.toFixed(2);
+                }
+            </script>
+        </body>
+    </head>
+</html>
+<!--Nanti berarti yang dimasukkin local storage buat marketing itu harga rumah sama komisi marketing-->

@@ -1,0 +1,85 @@
+body {
+    position: absolute;
+    margin: 0px;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-image: url("../Images/background-landing1.jpeg");
+    background-size: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    justify-content: space-between;
+    border-bottom: 2px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+.header-container {
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    padding: 0px;
+}
+
+.image-logo {
+    display: block;
+    margin-left: 10px;
+    height: 60px;
+    margin: 10px 10px;
+    float: left;
+}
+
+#header-title {
+    display: block;
+    float: right;
+    color: black;
+    font-weight: 800;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 10px;
+    margin: 10px 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.322);
+    border-right: 3px solid #fff;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-size: 50px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container .btn:hover {
+    text-decoration: underline;
+}

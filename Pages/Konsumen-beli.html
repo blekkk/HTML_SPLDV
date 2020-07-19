@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>H O M I E S</title>
+    <link rel="stylesheet" type="text/css" href="../Assets/CSS/Konsumen-beli.css">
+</head>
+    
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img class="image-logo" src="../Assets/Images/logokesamping2.png">
+            </div>
+            <div id="header-title">
+                <a href="Konsumen-tipe-1.html"><span>Back</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <h1 style="font-size:20px; padding: 2%; color: white;">Data Pribadi</h1>
+            <form>
+                <input type="text" placeholder="Nama" class="form">
+                <input type="text" placeholder="E-mail" class="form">
+                <input type="number" placeholder="No.Telp" class="form">
+                <input type="text" placeholder="Alamat" class="form">
+                <button class="button" onclick="notif()" style="margin: 5%;" id="btn"><span>Pesan Sekarang </span></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<footer>
+        <div id="footer-menu">
+            <ul class="footer-menu-container">
+                <li id="About" class="footer-menu-inside">
+                    <span>About</span>
+                </li>
+                <li id="FaQ" class="footer-menu-inside">
+                    <span>FaQ</span>
+                </li>
+                <li id="Terms" class="footer-menu-inside">
+                    <span>Terms</span>
+                </li>
+                <li id="Support" class="footer-menu-inside">
+                    <span>Support</span>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <span id="copyright">Jl.Cisaranten Wetan no.77, Bandung (022-777-7777)</span>
+        </div>
+</footer>
+
+<script>
+    function notif()
+    {
+        alert("E-mail verifikasi telah dikirim ke alamat e-mail anda! ")
+    }
+</script>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>H O M I E S - Investor</title>
+    <link rel="shortcut icon" href="../Assets/Images/faviconfixed.png">
+    <link rel="stylesheet" type="text/css" href="../Assets/CSS/Investor.css">
+</head>
+<script src="../Assets/JS/hitung.js"></script>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img class="image-logo" src="../Assets/Images/logokesamping2.png">
+            </div>
+            <div id="header-title">
+                <a href="GuestPage2.html"><span>Back</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <table>
+                <tr>
+                    <td>
+                        <center>
+                            <div class="form-1">
+                                <center><span style="font-size:40px;color: white;">Rumah Tipe 1</span></center>
+                                <table>
+                                    <form>
+                                        <tr>
+                                            <td>Harga Rumah</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="harga1" placeholder="Harga rumah"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Luas Tanah</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="lt1" placeholder="Luas Tanah"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keuntungan(%)</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="persen1" placeholder="Keuntungan(%)"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Komisi Marketing(Rp)</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="komisi1" placeholder="Komisi Marketing(Rp)"></td>
+                                        </tr>
+                                    </form>
+                                </table>
+                            </div>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <div class="form-2">
+                                <center><span style="font-size:40px;color: white;">Rumah Tipe 2</span></center>
+                                <table>
+                                    <form>
+                                        <tr>
+                                            <td>Harga Rumah</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="harga2" placeholder="Harga rumah"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Luas Tanah</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="lt2" placeholder="Luas Tanah"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keuntungan(%)</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="persen2" placeholder="Keuntungan(%)"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Komisi Marketing(Rp)</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="komisi2" placeholder="Komisi Marketing(Rp)"></td>
+                                        </tr>
+                                    </form>
+                                </table>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <div class="form-3">
+                                <center><span style="font-size:40px;color: white;">Jumlah</span></center>
+                                <table>
+                                    <form>
+                                        <tr>
+                                            <td>Maksimal Luas</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="tanahmaks" placeholder="Maksimal Luas"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Modal</td>
+                                            <td>:</td>
+                                            <td><input class="forms" type="text" id="modal" placeholder="Total Modal"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                <center>
+                                                    <button type="button" style="vertical-align:middle" onclick="labapenjualan()">Calculate</button>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                    </form>
+                                </table>
+                            </div>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <div class="hasil">
+                                <span style="font-size:40px;color: white;">Hasil Kalkulasi</span>
+                                <table>
+                                    <tr>
+                                        <td>Banyak rumah tipe 1</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="bykrumah1" placeholder="Banyak Rumah Tipe 1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Banyak rumah tipe 2</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="bykrumah2" placeholder="Banyak Rumah Tipe 2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harga jual rumah tipe 1</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="total1" placeholder="Harga jual Rumah Tipe 1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harga jual rumah tipe 2</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="total2" placeholder="Harga jual Rumah Tipe 2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Keuntungan rumah tipe 1</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="untung1" placeholder="Keuntungan Rumah Tipe 1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Keuntungan rumah tipe 2</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="untung2" placeholder="Keuntungan Rumah Tipe 2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Keuntungan total</td>
+                                        <td>:</td>
+                                        <td><input class="forms" type="text" id="untung" placeholder="Keuntungan Total"></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div id="footer-menu">
+        <ul class="footer-menu-container">
+            <li id="About" class="footer-menu-inside">
+                <span>About</span>
+            </li>
+            <li id="FaQ" class="footer-menu-inside">
+                <span>FaQ</span>
+            </li>
+            <li id="Terms" class="footer-menu-inside">
+                <span>Terms</span>
+            </li>
+            <li id="Support" class="footer-menu-inside">
+                <span>Support</span>
+            </li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <span id="copyright">Jl.Cisaranten Wetan no.77, Bandung (022-777-7777)</span>
+    </div>
+</footer>
+
+
+</html>
